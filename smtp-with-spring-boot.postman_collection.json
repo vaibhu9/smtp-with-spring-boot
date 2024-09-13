@@ -1,0 +1,68 @@
+{
+	"info": {
+		"_postman_id": "d817395d-3305-4114-b19f-50e9ff6d1fdf",
+		"name": "smtp-with-spring-boot",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37733714"
+	},
+	"item": [
+		{
+			"name": "send-mail",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"recipient\": \"vaibhavshejol9@gmail.com\",\r\n  \"subject\": \"Welcome to National Toastmasters-Club\",\r\n  \"msgBody\": \"Hey Mr. Vaibhav Shejol! \\nThanks for registering to our Toastmasters-Club, you will find your best future here.\\nBest of Luck!!!\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/send-mail",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"send-mail"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "send-mail-with-attachment",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"recipient\": \"vaibhavshejol9@gmail.com\",\r\n  \"subject\": \"Welcome to National Toastmasters-Club\",\r\n  \"msgBody\": \"Hey Mr. Vaibhav Shejol! \\nThanks for registering to our Toastmasters-Club, you will find your best future here.\\nBest of Luck!!!\"\r\n  \"attachment\": \"C://Users/vaibhav.shejol/Pictures/welcom-picture.JPG\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/send-mail-with-attachment",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"send-mail-with-attachment"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
